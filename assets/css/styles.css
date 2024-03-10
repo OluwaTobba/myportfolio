@@ -410,6 +410,13 @@ img {
   transform: translateY(-4rem);
 }
 
+.about__skills-content {
+  grid-template-columns: repeat(5, max-content);
+  justify-content: center;
+  align-items: center;
+  gap: 2rem 1.5rem;
+}
+
 /*=============== SERVICES ===============*/
 
 
