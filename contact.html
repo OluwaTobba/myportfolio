@@ -61,7 +61,34 @@
       <main class="main">
          <!--==================== CONTACT ====================-->
          <section class="contact section">
-            
+            <h2 class="section__title">
+                Let's Talk <br> About Your Project
+            </h2>
+
+            <div class="contact__page container grid">
+                <form action="" class="contact__form grid" id="contact-form">
+                    <div class="contact__group grid">
+                        <div class="contact__box">
+                            <input type="text" name="user_name" id="name" required placeholder="Your Names" class="contact__input">
+                            <label for="name" class="contact__label">First & Last Name</label>
+                        </div>
+
+                        <div class="contact__box">
+                            <input type="text" name="user_email" id="email" required placeholder="Your E-mail" class="contact__input">
+                            <label for="email" class="contact__label">E-mail Address</label>
+                        </div>
+
+                        <div class="contact__box contact__area">
+                            <textarea name="user-message" id="message" required placeholder="Your Message" class="contact__input"></textarea>
+                            <label for="message" class="contact__label">Your Message</label>
+                        </div>
+                    </div>
+
+                    <p class="contact__message" id="contact-message">Message</p>
+
+                    <button type="submit" class="contact__send button">Send Message</button>
+                </form>
+            </div>
          </section>
       </main>
 
@@ -72,7 +99,7 @@
       <script src="assets/js/main.js"></script>
       
       <!--=============== EMAIL JS ===============-->
-      
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       
       <!--=============== CONTACT JS ===============-->
       <script src="assets/js/contact.js"></script>
