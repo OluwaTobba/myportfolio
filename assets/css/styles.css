@@ -746,6 +746,15 @@ img {
   transition: transform .4s;
 }
 
+.footer__social-link:hover {
+  transform: translateY(-.25rem);
+}
+
+.footer__copy {
+  font-size: var(--small-font-size);
+  font-weight: var(--font-medium);
+}
+
 /*=============== SCROLL BAR ===============*/
 
 
