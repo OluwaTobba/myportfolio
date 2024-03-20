@@ -117,16 +117,51 @@ img {
 }
 
 /*=============== THEME ===============*/
+.nav__actions {
+  display: flex;
+  align-items: center;
+  column-gap: 1rem;
+}
 
+.change-theme {
+  color: var(--white-color);
+  font-size: 1.25rem;
+  cursor: pointer;
+  transition: color .4s;
+}
 
 /*========== Variables Dark theme ==========*/
-
+body.dark-theme {
+  --title-color: hsl(var(--hue), 24%, 85%);
+  --text-color: hsl(var(--hue), 8%, 70%);
+  --body-color: hsl(var(--hue), 16%, 8%);
+  --container-color: hsl(var(--hue), 16%, 12%);
+  --shadow-color: hsla(var(--hue), 32%, 4%, .4);
+}
 
 /*========== 
 	Color changes in some parts of 
 	the website, in dark theme
 ==========*/
+.dark-theme {
+  box-shadow: 0 12px 24px var(--shadow-color);
+}
 
+.dark-theme .services__modal {
+  background-color: hsla(var(--hue), 90%, 8%, .2);
+}
+
+.dark-theme::-webkit-scrollbar {
+  background-color: hsl(var(--hue), 16%, 15%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hue), 16%, 25%);
+}
+
+.dark-theme::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue), 16%, 35%);
+}
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -173,8 +208,6 @@ img {
                 hsl(var(--hue), 90%, 80%), 
                 hsl(var(--hue), 90%, 30%));
 }
-
-
 
 .main {
   overflow: hidden;
@@ -270,7 +303,7 @@ img {
     background-color: var(--body-color);
     box-shadow: 0 2px 16px var(--shadow-color);
 }
-.bg-header :is(.nav__logo, .nav__toggle){
+.bg-header :is(.nav__logo, .nav__toggle, .change-theme){
     color: var(--title-color);
 }
 
@@ -279,7 +312,7 @@ img {
     background-color: var(--body-color);
 }
 
-.header-pages :is(.nav__logo, .nav__toggle) {
+.header-pages :is(.nav__logo, .nav__toggle, .change-theme) {
     color: var(--title-color);
 }
 
@@ -322,6 +355,10 @@ img {
 
 .home__profile {
     justify-content: center;
+}
+
+.home__content {
+  row-gap: 3rem;
 }
 
 .home__data {
@@ -669,7 +706,7 @@ img {
 }
 
 .contact__area {
-  height: 13rem;
+  height: 10rem;
 }
 
 .contact__area textarea {
@@ -756,20 +793,110 @@ img {
 }
 
 /*=============== SCROLL BAR ===============*/
+::-webkit-scrollbar {
+  width: 0.6rem;
+  background-color: hsl(var(--hue), 20%, 85%);
+}
 
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--hue), 20%, 65%);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: hsl(var(--hue), 20%, 55%);
+}
 
 /*=============== SCROLL UP ===============*/
+.scrollup {
+  position: fixed;
+  right: 1rem;
+  bottom: -50%;
+  background-color: var(--container-color);
+  box-shadow: 0 12px 24px var(--shadow-color);
+  display: inline-flex;
+  padding: 6px;
+  font-size: 1.25rem;
+  color: var(--title-color);
+  z-index: var(--z-tooltip);
+  transition: bottom .4s, transform .4s, background-color .4s;
+}
 
+.scrollup:hover {
+  transform: translateY(-.5rem);
+}
 
 /* Show Scroll Up */
-
+.show-scroll {
+  bottom: 3rem;
+}
 
 /*=============== BREAKPOINTS ===============*/
 /* For small devices */
+@media screen and (max-width: 320px) {
+  .container {
+    margin-inline: 1rem;
+  }
 
+  .services__modal {
+    padding-inline: .5rem;
+  }
+
+  .about__skills-content {
+    grid-template-columns: repeat(4, max-content);
+  }
+}
 
 /* For medium devices */
+@media screen and (min-width: 576px) {
+  .services__container {
+    grid-template-columns: 320px;
+    justify-content: center;
+  }
 
+  .services__modal-content {
+    width: 400px;
+  }
+
+  .work__container {
+    grid-template-columns: 350px;
+    justify-content: center;
+  }
+
+  .about__container {
+    grid-template-columns: 400px;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .services__container {
+    grid-template-columns: repeat(2, 320px);
+  }
+
+  .work__container {
+    grid-template-columns: repeat(2, 350px);
+  }
+
+  .testimonial__container {
+    max-width: 700px;
+    margin-inline: auto;
+  }
+
+  .testimonial__description {
+    width: 470px;
+    margin-inline: auto;
+  }
+
+  .contact__page {
+    grid-template-columns: 670px;
+    justify-content: center;
+  }
+  
+  .contact__group {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1rem;
+  }
+}
 
 /* For large devices */
 
