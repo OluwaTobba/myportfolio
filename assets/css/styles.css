@@ -891,7 +891,7 @@ body.dark-theme {
     grid-template-columns: 670px;
     justify-content: center;
   }
-  
+
   .contact__group {
     grid-template-columns: repeat(2, 1fr);
     column-gap: 1rem;
