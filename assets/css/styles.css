@@ -646,7 +646,7 @@ body.dark-theme {
 }
 
 /* Swiper class */
-.swiper-pagination-bullets.swiper-pagination-horizontal {
+.swiper-pagination-bullets .swiper-pagination-horizontal {
   bottom: -1rem;
 }
 
