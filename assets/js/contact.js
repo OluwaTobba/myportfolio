@@ -5,7 +5,7 @@
 
   const status = document.getElementById('contact-status')
   const submitButton = form.querySelector('button[type="submit"]')
-  const fallbackMessage = 'Sorry, the message could not be sent. Please email me directly at michaeloluwatoba14@gmail.com.'
+  const fallbackMessage = 'Sorry, the message could not be sent. Please email me directly at michealoluwatoba14@gmail.com.'
 
   const setStatus = (message, state) => {
     status.textContent = message
