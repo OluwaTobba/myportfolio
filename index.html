@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDSJ0LZVRY"></script>
     <script>
@@ -14,404 +13,446 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Michael Ogundipe is a software engineer building backend services, APIs and web applications with Go, JavaScript, TypeScript, React and Firebase.">
+    <meta name="theme-color" content="#f7f7f4">
 
-    <meta name="description" content="Michael Opemipo Ogundipe">
-    <meta name="keywords" content="Competent Developer in Nigeria, Remote SOftware Developer, Remote Web Developer, Remote Web Designer, MIchael Opemipo Ogundipe, MIchael Opemipo Oluwatoba Ogundipe">
+    <title>Michael Ogundipe | Software Engineer</title>
+    <link rel="canonical" href="https://michaeltobba.netlify.app/">
 
-    <meta property="og:title" content="M.O.O.O.">
-    <meta property="og:description" content="Michael Ogundipe's Portfolio">
-    <meta property="og:image" content="assets/img/me1.jpg">
-    <meta property="og:url" content="https://michaeltobba.netlify.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Michael Ogundipe">
+    <meta property="og:title" content="Michael Ogundipe | Software Engineer">
+    <meta property="og:description" content="Backend services, APIs and web applications built with Go, JavaScript, TypeScript and React.">
+    <meta property="og:url" content="https://michaeltobba.netlify.app/">
+    <meta property="og:image" content="https://michaeltobba.netlify.app/assets/img/profile-800.jpg">
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/me1.jpg" type="image/x-icon">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Michael Ogundipe",
+        "url": "https://michaeltobba.netlify.app/",
+        "image": "https://michaeltobba.netlify.app/assets/img/profile-800.jpg",
+        "jobTitle": "Software Engineer",
+        "sameAs": [
+            "https://github.com/OluwaTobba",
+            "https://www.linkedin.com/in/michaeltobba"
+        ]
+    }
+    </script>
 
-    <!--=============== REMIXICONS ===============-->
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-
-    <!--=============== SWIPER CSS ===============-->
-    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css">
-
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>Michael Onaopemipo Oluwatoba Ogundipe</title>
+    <!-- Apply the saved theme before first paint -->
+    <script>
+    try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (error) {}
+    </script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
 
     <!--==================== HEADER ====================-->
-    <header class="header" id="header">
-        <nav class="nav container">
-            <a href="/index.html" class="nav__logo">M.O.O.O</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="/index.html" class="nav__link">Home</a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="/about.html" class="nav__link">About Me</a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="/work.html" class="nav__link">Portfolio</a>
-                    </li>
-                    
-                    <li class="nav_item">
-                        <a href="/contact.html" class="button">Contact Me</a>
-                    </li>
-                </ul>
-
-                <!-- close button -->
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
+    <header class="site-header" id="site-header">
+        <div class="container nav">
+            <a href="index.html" class="nav__brand">Michael Ogundipe</a>
 
             <div class="nav__actions">
-                <!-- theme button -->
-                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                <nav class="site-nav" id="site-nav" aria-label="Primary" hidden>
+                    <ul class="nav__list">
+                        <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="index.html#approach" class="nav__link">Approach</a></li>
+                        <li><a href="index.html#skills" class="nav__link">Skills</a></li>
+                        <li><a href="about.html" class="nav__link">About</a></li>
+                        <li><a href="work.html" class="nav__link">Archive</a></li>
+                        <li><a href="contact.html" class="btn btn--primary">Contact</a></li>
+                    </ul>
+                </nav>
 
-                <!-- toggle button -->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-4-line"></i>
-                </div>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Dark theme" aria-pressed="false">
+                    <i class="ri-moon-line" aria-hidden="true"></i>
+                </button>
+
+                <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
+    <main id="main">
+        <!--==================== HERO ====================-->
+        <section class="hero" aria-labelledby="hero-title">
+            <div class="container hero__grid">
+                <div class="hero__content">
+                    <p class="hero__status">Open to engineering roles and collaborations</p>
 
-        <!--==================== HOME ====================-->
-        <section class="home section">
-            <div class="home__rectangle"></div>
+                    <h1 class="hero__name" id="hero-title">Michael Ogundipe</h1>
 
-            <div class="home__container container grid">
-                <div class="home__profile profile">
-                    <div class="profile__content">
-                        <img src="/assets/img/pp.JPG" alt="profile-image" class="profile__img">
+                    <p class="hero__role">Software engineer focused on backend services, APIs and web applications</p>
+
+                    <p class="hero__lead">
+                        I build the services behind applications: APIs, data models and monitoring, plus the
+                        React and TypeScript interfaces that use them. My recent work includes a Go monitoring
+                        server with a query API and alert rules.
+                    </p>
+
+                    <div class="hero__actions">
+                        <a href="#projects" class="btn btn--primary">View featured projects</a>
+                        <a href="contact.html" class="btn btn--ghost">Get in touch</a>
+                    </div>
+
+                    <div class="hero__links">
+                        <a href="https://github.com/OluwaTobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                            <i class="ri-github-fill" aria-hidden="true"></i>
+                            <span class="visually-hidden">GitHub profile (opens in a new tab)</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                            <i class="ri-linkedin-fill" aria-hidden="true"></i>
+                            <span class="visually-hidden">LinkedIn profile (opens in a new tab)</span>
+                        </a>
+                        <a href="mailto:michaeloluwatoba14@gmail.com" class="icon-link">
+                            <i class="ri-mail-line" aria-hidden="true"></i>
+                            <span class="visually-hidden">Email Michael</span>
+                        </a>
+                        <a href="assets/pdf/Michael%20Ogundipe's%20Resume.pdf" class="text-link" download>
+                            <i class="ri-file-text-line" aria-hidden="true"></i>
+                            Download CV
+                        </a>
                     </div>
                 </div>
 
-                <div class="home__content grid">
-                    <div class="home__data grid">
-                        <h1 class="home__name">Michael Ogundipe</h1>
-
-                        <h2 class="home__profession">Software Developer</h2>
-
-                        <div class="home__socials">
-                            <a href="https://github.com/OluwaTobba" class="home__social-link" target="_blank">
-                                <i class="ri-github-fill"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/michaeltobba" class="home__social-link" target="_blank">
-                                <i class="ri-linkedin-box-fill"></i>
-                            </a>
-                            <a href="https://linktr.ee/michaeltobba" class="home__social-link" target="_blank">
-                                <i class="ri-links-line"></i>
-                            </a>
-                        </div>
-                    </div>
-
-                    <a href="/assets/pdf/Michael Ogundipe's Resume.pdf" download="" class="home__button button">Download CV</a>
-
-                </div>
-            </div>
-
-        </section>
-
-        <!--==================== SERVICES ====================-->
-        <section class="services section">
-            <h2 class="section__title">
-                The Services <br> I Offer
-            </h2>
-
-            <div class="services__container container grid">
-
-                <article class="services__card">
-                    <i class="ri-code-s-slash-line services__icon"></i>
-                    <h2 class="services__title">Web Development</h2>
-                    <p class="services__description">
-                        Leveraging a potent combination of creative design and technical proficiency, I bring websites and web applications to life.
-                    </p>
-
-                    <button class="services__button button">Know More</button>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="ri-close-circle-line services__modal-close"></i>
-                            <h2 class="services__modal-title">Web Developer</h2>
-                            <ul class="services__modal-list grid">
-                                <li class="services__modal-item">
-                                    Develop professional and quality websites at the client's request.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I bring websites and web applications to life.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I position your website with advanced SEO.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I ensure seamless functionality, responsiveness and visual appeal of your digital presence.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="services__card">
-                    <i class="ri-terminal-line services__icon"></i>
-                    <h2 class="services__title">Software Development</h2>
-                    <p class="services__description">
-                        I specialize in conceptualizing, designing, and implementing custom software solutions tailored to meet your unique needs.
-                    </p>
-
-                    <button class="services__button button">Know More</button>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="ri-close-circle-line services__modal-close"></i>
-                            <h2 class="services__modal-title">Software Developer</h2>
-                            <ul class="services__modal-list grid">
-                                <li class="services__modal-item">
-                                    Develop professional and quality softwares/webapps at the client's request.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I bring strategic blend of creativity.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I create robust applications on existing software.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I ensure seamless functionality, responsiveness and visual appeal of your digital presence.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="services__card">
-                    <i class="ri-admin-line services__icon"></i>
-                    <h2 class="services__title">Backend Development</h2>
-                    <p class="services__description">
-                        I specialize in building the engine that powers your digital experiences.
-                    </p>
-
-                    <button class="services__button button">Know More</button>
-
-                    <div class="services__modal">
-                        <div class="services__modal-content">
-                            <i class="ri-close-circle-line services__modal-close"></i>
-                            <h2 class="services__modal-title">Backend Developer</h2>
-                            <ul class="services__modal-list grid">
-                                <li class="services__modal-item">
-                                    Develop professional and quality databases at the client's request.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I design robust server-side systems that handle data processing.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I'm proficient on languages like PHP, MySQL, Firebase, and NodeJS.
-                                </li>
-
-                                <li class="services__modal-item">
-                                    I ensure seamless functionality, and performance of your web applications.
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </article>
-
+                <figure class="hero__media">
+                    <img src="assets/img/profile-800.jpg" width="800" height="834" alt="Portrait of Michael Ogundipe" class="hero__photo" fetchpriority="high">
+                </figure>
             </div>
         </section>
 
-        <!--==================== WORK ====================-->
-        <section class="work section">
-            <h2 class="section__title">
-                My Most <br>Recent Works
-            </h2>
-
-            <div class="work__container container grid">
-
-                <article class="work__card">
-                    <a href="https://propheticfireconference.netlify.app" target="_blank" class="work__link">
-                        <img src="/assets/img/mfm-lp-1.png" alt="MFM Conference Registration Portal" class="work__img">
-                        <i class="ri-arrow-right-double-line work__icon"></i>
-                    </a>
-                    <h2 class="work__title">MFM Conference Registration Portal</h2>
-                    <span class="work__subtitle">Software Development (React, TailwindCSS, Firebase)</span>
-                </article>
-
-                <article class="work__card">
-                    <a href="https://colorsfashionwknd.netlify.app/" target="_blank" class="work__link">
-                        <img src="/assets/img/colos_wknd.png" alt="Colors Fashion Wknd Website" class="work__img">
-                        <i class="ri-arrow-right-double-line work__icon"></i>
-                    </a>
-                    <h2 class="work__title">Colors Fashion Wknd Website</h2>
-                    <span class="work__subtitle">Software Development (HTML, CSS, JavaScript, Netlify Forms, Flutterwave Payment SDK)</span>
-                </article>
-
-                <article class="work__card">
-                    <a href="https://lita-web-dev-exam.netlify.app" target="_blank" class="work__link">
-                        <img src="/assets/img/lita-exam-portal.png" alt="LITA Exam Portal" class="work__img">
-                        <i class="ri-arrow-right-double-line work__icon"></i>
-                    </a>
-                    <h2 class="work__title">LITA Exam Portal</h2>
-                    <span class="work__subtitle">Software Development (React, TailwindCSS, Firebase)</span>
-                </article>
-
-                <article class="work__card">
-                    <a href="https://emrsystems.netlify.app/" target="_blank" class="work__link">
-                        <img src="/assets/img/emrs.png" alt="EMRs WebApp" class="work__img">
-                        <i class="ri-arrow-right-double-line work__icon"></i>
-                    </a>
-                    <h2 class="work__title">EMRs WebApp</h2>
-                    <span class="work__subtitle">Software Development (React JS, Tailwind, Firebase)</span>
-                </article>
-
-            </div>
-
-            <a href="/work.html" class="work__button button">See More</a>
-        </section>
-
-        <!--==================== TESTIMONIAL ====================-->
-        <section class="testimonial section">
-            <h2 class="section__title">
-                What They Say <br> About Me?
-            </h2>
-
-            <div class="testimonial__container container">
-                <div class="testimonial__swiper swiper">
-                    <div class="swiper-wrapper">
-
-                        <article class="testimonial__card swiper-slide">
-                            <div class="testimonial__border">
-                                <img src="/assets/img/testimonial-1.jpg" alt="testimonial-1" class="testimonial__img">
-                            </div>
-                            <h2 class="testimonial__name">Samuel Olawuyi - Founder, Bezalel FX University</h2>
-                            <p class="testimonial__description">
-                                Working with this web designer was an absolute pleasure! Their creativity knows no bounds, and the attention to detail in crafting my website was truly impressive. The end result exceeded my expectations, showcasing not only technical expertise but also a keen understanding of my vision. I highly recommend this designer for anyone seeking a perfect blend of skill, innovation, and professionalism.
-                            </p>
-                        </article>
-
-                        <article class="testimonial__card swiper-slide">
-                            <div class="testimonial__border">
-                                <img src="/assets/img/me1.jpg" alt="testimonial-2" class="testimonial__img">
-                            </div>
-                            <h2 class="testimonial__name">Mey Doth
-                            </h2>
-                            <p class="testimonial__description">
-                                Working with this web designer was an absolute pleasure! Their creativity knows no bounds, and the attention to detail in crafting my website was truly impressive. The end result exceeded my expectations, showcasing not only technical expertise but also a keen understanding of my vision. I highly recommend this designer for anyone seeking a perfect blend of skill, innovation, and professionalism.
-                            </p>
-                        </article>
-
-                        <article class="testimonial__card swiper-slide">
-                            <div class="testimonial__border">
-                                <img src="/assets/img/me1.jpg" alt="testimonial-3" class="testimonial__img">
-                            </div>
-                            <h2 class="testimonial__name">Jen Will</h2>
-                            <p class="testimonial__description">
-                                Working with this web designer was an absolute pleasure! Their creativity knows no bounds, and the attention to detail in crafting my website was truly impressive. The end result exceeded my expectations, showcasing not only technical expertise but also a keen understanding of my vision. I highly recommend this designer for anyone seeking a perfect blend of skill, innovation, and professionalism.
-                            </p>
-                        </article>
-
-                        <article class="testimonial__card swiper-slide">
-                            <div class="testimonial__border">
-                                <img src="/assets/img/me1.jpg" alt="testimonial-4" class="testimonial__img">
-                            </div>
-                            <h2 class="testimonial__name">Elon Musk</h2>
-                            <p class="testimonial__description">
-                                Working with this web designer was an absolute pleasure! Their creativity knows no bounds, and the attention to detail in crafting my website was truly impressive. The end result exceeded my expectations, showcasing not only technical expertise but also a keen understanding of my vision. I highly recommend this designer for anyone seeking a perfect blend of skill, innovation, and professionalism.
-                            </p>
-                        </article>
-
-                    </div>
+        <!--==================== FEATURED PROJECTS ====================-->
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow">Featured projects</p>
+                    <h2 id="projects-title">Four projects, with the engineering behind them</h2>
+                    <p class="section__lead">A focused selection. The full list is in the project archive.</p>
                 </div>
 
-                <!--====== Pagination ======-->
-                <div class="swiper-pagination"></div>
+                <div class="project-grid">
+                    <article class="project-card">
+                        <div class="project-card__media" aria-hidden="true">
+                            <i class="ri-server-line"></i>
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__kicker">Backend service · Go</p>
+                            <h3 class="project-card__title">Monitoring and observation platform</h3>
+                            <p class="project-card__summary">
+                                A single-binary monitoring server (obsd) with no third-party dependencies. It scrapes
+                                Prometheus-format endpoints, accepts pushed metrics, stores time series, evaluates alert
+                                rules and serves a query API.
+                            </p>
+                            <ul class="project-card__points">
+                                <li>Storage is an in-memory, label-indexed time-series store with per-series caps and time-based retention.</li>
+                                <li>Alert rules move through pending, firing and resolved states, with notifications to logs or a webhook.</li>
+                                <li>The README documents tests for the storage engine, the Prometheus parser, the alert state machine and config validation.</li>
+                            </ul>
+                            <p class="project-card__status">
+                                A reference implementation. Data is kept in memory and is lost on restart, and the server has no
+                                authentication, so it is meant to sit behind an authenticated reverse proxy.
+                            </p>
+                            <div class="chips" aria-label="Technologies">
+                                <span class="chip">Go</span>
+                                <span class="chip">HTTP API</span>
+                                <span class="chip">Time series</span>
+                                <span class="chip">Alerting</span>
+                            </div>
+                            <div class="project-card__footer">
+                                <div class="project-card__links">
+                                    <a href="https://github.com/OluwaTobba/monitoring-and-observation-platform" class="text-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="ri-github-fill" aria-hidden="true"></i> Repository<span class="visually-hidden"> (opens in a new tab)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__media">
+                            <img src="assets/img/iras.png" width="1920" height="916" alt="Screenshot of the IRAS inspection report web application" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__kicker">Web application · TypeScript</p>
+                            <h3 class="project-card__title">IRAS: Inspection Report Automation System</h3>
+                            <p class="project-card__summary">
+                                A web application for automating inspection report generation. The frontend is built with
+                                Vite and TypeScript, and the project includes Firebase configuration for Cloud Functions,
+                                Firestore and Storage.
+                            </p>
+                            <ul class="project-card__points">
+                                <li>Firebase rules for Firestore, Storage and the Realtime Database, plus Cloud Functions in the repository.</li>
+                                <li>Deployment configuration for both Vercel and Firebase App Hosting.</li>
+                            </ul>
+                            <p class="project-card__status">Client paused deployment. The demo link may not reflect the latest version.</p>
+                            <div class="chips" aria-label="Technologies">
+                                <span class="chip">TypeScript</span>
+                                <span class="chip">Vite</span>
+                                <span class="chip">Firebase</span>
+                                <span class="chip">Cloud Functions</span>
+                            </div>
+                            <div class="project-card__footer">
+                                <div class="project-card__links">
+                                    <a href="https://github.com/OluwaTobba/iras" class="text-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="ri-github-fill" aria-hidden="true"></i> Repository<span class="visually-hidden"> (opens in a new tab)</span>
+                                    </a>
+                                    <a href="https://iras-nine.vercel.app" class="text-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="ri-external-link-line" aria-hidden="true"></i> Live demo<span class="visually-hidden"> (opens in a new tab)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__media">
+                            <img src="assets/img/cajem-social.png" width="1920" height="834" alt="Screenshot of the CAJEM Social media web app" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__kicker">Full-stack · React and PHP</p>
+                            <h3 class="project-card__title">CAJEM Social</h3>
+                            <p class="project-card__summary">
+                                A social media app designed and developed with React and PHP. The repository is public
+                                and documents the project.
+                            </p>
+                            <p class="project-card__status">Client paused deployment.</p>
+                            <div class="chips" aria-label="Technologies">
+                                <span class="chip">React</span>
+                                <span class="chip">PHP</span>
+                                <span class="chip">Tailwind CSS</span>
+                                <span class="chip">Firebase</span>
+                            </div>
+                            <div class="project-card__footer">
+                                <div class="project-card__links">
+                                    <a href="https://github.com/OluwaTobba/CAJEM-Social" class="text-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="ri-github-fill" aria-hidden="true"></i> Repository<span class="visually-hidden"> (opens in a new tab)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-card__media">
+                            <img src="assets/img/emrs-800.png" width="800" height="395" alt="Screenshot of the EMRs electronic medical records web app" loading="lazy">
+                        </div>
+                        <div class="project-card__body">
+                            <p class="project-card__kicker">Web application · JavaScript</p>
+                            <h3 class="project-card__title">EMRs Web App</h3>
+                            <p class="project-card__summary">
+                                A web app for electronic medical records, the digital equivalent of patients' paper charts.
+                                Built with JavaScript, Vite and Tailwind CSS.
+                            </p>
+                            <p class="project-card__status">Live demo deployed on Netlify.</p>
+                            <div class="chips" aria-label="Technologies">
+                                <span class="chip">JavaScript</span>
+                                <span class="chip">Vite</span>
+                                <span class="chip">Tailwind CSS</span>
+                            </div>
+                            <div class="project-card__footer">
+                                <div class="project-card__links">
+                                    <a href="https://github.com/OluwaTobba/EMRs" class="text-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="ri-github-fill" aria-hidden="true"></i> Repository<span class="visually-hidden"> (opens in a new tab)</span>
+                                    </a>
+                                    <a href="https://emrsystems.netlify.app/" class="text-link" target="_blank" rel="noopener noreferrer">
+                                        <i class="ri-external-link-line" aria-hidden="true"></i> Live demo<span class="visually-hidden"> (opens in a new tab)</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <p class="section__more">
+                    <a href="work.html" class="text-link">Browse the full project archive <i class="ri-arrow-right-line" aria-hidden="true"></i></a>
+                </p>
             </div>
         </section>
 
-        <!--==================== CONTACT ====================-->
-        <section class="contact section">
-            <div class="contact__container container grid">
-                <h2 class="section__title">
-                    Let's Talk <br> About Your Project
-                </h2>
-                <a href="contact.html" class="contact__button button">Contact Me</a>
+        <!--==================== ENGINEERING APPROACH ====================-->
+        <section class="section section--alt" id="approach" aria-labelledby="approach-title">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow">Engineering approach</p>
+                    <h2 id="approach-title">How I approach backend work</h2>
+                    <p class="section__lead">Examples from my projects, rather than general principles.</p>
+                </div>
+
+                <div class="approach-grid">
+                    <article class="approach-item">
+                        <i class="ri-route-line approach-item__icon" aria-hidden="true"></i>
+                        <h3>API design</h3>
+                        <p>
+                            The monitoring platform separates ingestion (a JSON write endpoint) from reads: a query endpoint
+                            with optional bucketed downsampling, plus series, alerts and targets endpoints for inspection.
+                        </p>
+                    </article>
+
+                    <article class="approach-item">
+                        <i class="ri-database-2-line approach-item__icon" aria-hidden="true"></i>
+                        <h3>Data modelling</h3>
+                        <p>
+                            Series are indexed by their label sets. The store applies a per-series cap and time-based
+                            retention, so old and excess samples are dropped rather than held indefinitely.
+                        </p>
+                    </article>
+
+                    <article class="approach-item">
+                        <i class="ri-test-tube-line approach-item__icon" aria-hidden="true"></i>
+                        <h3>Testing and failure states</h3>
+                        <p>
+                            Alert rules move through pending, firing and resolved states. According to its README, the project
+                            tests that state machine, the Prometheus parser and config validation.
+                        </p>
+                    </article>
+
+                    <article class="approach-item">
+                        <i class="ri-shield-check-line approach-item__icon" aria-hidden="true"></i>
+                        <h3>Security and deployment</h3>
+                        <p>
+                            The monitoring server documents that it has no authentication and should sit behind an
+                            authenticated proxy. My Go training project covers REST APIs, gRPC, PostgreSQL, Docker,
+                            Kubernetes and JWT authentication.
+                        </p>
+                    </article>
+                </div>
             </div>
         </section>
 
+        <!--==================== SKILLS ====================-->
+        <section class="section" id="skills" aria-labelledby="skills-title">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow">Technical skills</p>
+                    <h2 id="skills-title">Tools I use, grouped by purpose</h2>
+                    <p class="section__lead">Grouped by where I have used each technology. Depth varies across the list.</p>
+                </div>
+
+                <div class="skills-grid">
+                    <section class="skill-group" aria-labelledby="skills-languages">
+                        <h3 id="skills-languages">Languages</h3>
+                        <div class="chips">
+                            <span class="chip">Go</span>
+                            <span class="chip">JavaScript</span>
+                            <span class="chip">TypeScript</span>
+                            <span class="chip">PHP</span>
+                            <span class="chip">HTML</span>
+                            <span class="chip">CSS</span>
+                        </div>
+                    </section>
+
+                    <section class="skill-group" aria-labelledby="skills-backend">
+                        <h3 id="skills-backend">Backend</h3>
+                        <div class="chips">
+                            <span class="chip">Go</span>
+                            <span class="chip">Node.js</span>
+                            <span class="chip">PHP</span>
+                            <span class="chip">REST APIs</span>
+                            <span class="chip">gRPC</span>
+                            <span class="chip">JWT auth</span>
+                        </div>
+                    </section>
+
+                    <section class="skill-group" aria-labelledby="skills-frontend">
+                        <h3 id="skills-frontend">Frontend</h3>
+                        <div class="chips">
+                            <span class="chip">React</span>
+                            <span class="chip">Next.js</span>
+                            <span class="chip">Vite</span>
+                            <span class="chip">Tailwind CSS</span>
+                            <span class="chip">Bootstrap</span>
+                        </div>
+                    </section>
+
+                    <section class="skill-group" aria-labelledby="skills-data">
+                        <h3 id="skills-data">Data and storage</h3>
+                        <div class="chips">
+                            <span class="chip">PostgreSQL</span>
+                            <span class="chip">MySQL</span>
+                            <span class="chip">Firebase</span>
+                            <span class="chip">Firestore</span>
+                        </div>
+                    </section>
+
+                    <section class="skill-group" aria-labelledby="skills-tools">
+                        <h3 id="skills-tools">Tools and infrastructure</h3>
+                        <div class="chips">
+                            <span class="chip">Git</span>
+                            <span class="chip">GitHub</span>
+                            <span class="chip">Docker</span>
+                            <span class="chip">Netlify</span>
+                            <span class="chip">Vercel</span>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </section>
+
+        <!--==================== CONTACT CTA ====================-->
+        <section class="section section--alt" aria-labelledby="cta-title">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow">Contact</p>
+                    <h2 id="cta-title">Have an engineering role or a project in mind?</h2>
+                    <p class="section__lead">
+                        I am interested in backend-leaning roles and in well-scoped collaborations. Send a short note with
+                        the context and I will get back to you by email.
+                    </p>
+                </div>
+                <div class="hero__actions">
+                    <a href="contact.html" class="btn btn--primary">Send a message</a>
+                    <a href="mailto:michaeloluwatoba14@gmail.com" class="btn btn--ghost">michaeloluwatoba14@gmail.com</a>
+                </div>
+            </div>
+        </section>
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__container container grid">
-            <div class="footer__content grid">
-                <a href="index.html" class="footer__logo">M.O.O.O</a>
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="index.html#projects">Projects</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Archive</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-                <ul class="footer__links">
-                    <li>
-                        <a href="/about.html" class="footer__link">About Me</a>
-                    </li>
-                    <li>
-                        <a href="/work.html" class="footer__link">My Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="/contact.html" class="footer__link">Contact Me</a>
-                    </li>
-                </ul>
-
+            <div class="footer__row">
+                <p>&copy; 2026 Michael Ogundipe. All rights reserved.</p>
                 <div class="footer__socials">
-                    <a href="https://github.com/OluwaTobba" target="_blank" class="footer__social-link">
-                        <i class="ri-github-fill"></i>
+                    <a href="https://github.com/OluwaTobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-github-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">GitHub (opens in a new tab)</span>
                     </a>
-                    <a href="https://twitter.com/michaeltobba" target="_blank" class="footer__social-link">
-                        <i class="ri-twitter-x-fill"></i>
+                    <a href="https://www.linkedin.com/in/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-linkedin-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">LinkedIn (opens in a new tab)</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/michaeltobba" target="_blank" class="footer__social-link">
-                        <i class="ri-linkedin-fill"></i>
-                    </a>
-                    <a href="https://www.instagram.com/michaeltobba/" target="_blank" class="footer__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <a href="https://wa.me/2348141993288/?text=Hi%20Michael!%20I%20would%20like%20to%20connect%20with%20you!" target="_blank" class="footer__social-link">
-                        <i class="ri-whatsapp-fill"></i>
-                    </a>
-                    <a href="mailto:michaeloluwatoba14@gmail.com" target="_blank" class="footer__social-link">
-                        <i class="ri-mail-send-fill"></i>
+                    <a href="https://twitter.com/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-twitter-x-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">X (opens in a new tab)</span>
                     </a>
                 </div>
             </div>
-
-            <span  class="footer__copy">
-                Michael Opemipo Oluwatoba Ogundipe <br> &#169; 2024 All Rights Reserved.
-            </span>
         </div>
     </footer>
 
-    <!--========== SCROLL UP ==========-->
-    <a href="#" class="scrollup" id="scroll-up">
-        <i class="ri-arrow-up-line"></i>
-    </a>
-
-    <!--=============== MAIN JS ===============-->
-    <script src="/assets/js/main.js"></script>
-
-    <!--=============== SWIPER JS ===============-->
-    <script src="/assets/js/swiper-bundle.min.js"></script>
-
-    <!--=============== INDEX JS ===============-->
-    <script src="/assets/js/index.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>

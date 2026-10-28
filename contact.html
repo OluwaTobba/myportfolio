@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDSJ0LZVRY"></script>
     <script>
@@ -14,150 +13,164 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Get in touch with Michael Ogundipe about software engineering roles, collaborations and projects.">
+    <meta name="theme-color" content="#f7f7f4">
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/me1.jpg" type="image/x-icon">
+    <title>Contact | Michael Ogundipe</title>
+    <link rel="canonical" href="https://michaeltobba.netlify.app/contact.html">
 
-    <!--=============== REMIXICONS ===============-->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Michael Ogundipe">
+    <meta property="og:title" content="Contact | Michael Ogundipe">
+    <meta property="og:description" content="Get in touch about software engineering roles, collaborations and projects.">
+    <meta property="og:url" content="https://michaeltobba.netlify.app/contact.html">
+    <meta property="og:image" content="https://michaeltobba.netlify.app/assets/img/profile-800.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>Contact Me - Michael Ogundipe</title>
+    <script>
+    try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (error) {}
+    </script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!--==================== HEADER ====================-->
-    <header class="header header-pages" id="header">
-        <nav class="nav container">
-            <a href="/index.html" class="nav__logo">M.O.O.O</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="/index.html" class="nav__link">Home</a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="/about.html" class="nav__link">About Me</a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="/work.html" class="nav__link">Portfolio</a>
-                    </li>
-                    
-                    <li class="nav_item">
-                        <a href="/contact.html" class="button">Contact Me</a>
-                    </li>
-                </ul>
-
-                <!-- close button -->
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
+    <header class="site-header" id="site-header">
+        <div class="container nav">
+            <a href="index.html" class="nav__brand">Michael Ogundipe</a>
 
             <div class="nav__actions">
-                <!-- theme button -->
-                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                <nav class="site-nav" id="site-nav" aria-label="Primary" hidden>
+                    <ul class="nav__list">
+                        <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="index.html#approach" class="nav__link">Approach</a></li>
+                        <li><a href="index.html#skills" class="nav__link">Skills</a></li>
+                        <li><a href="about.html" class="nav__link">About</a></li>
+                        <li><a href="work.html" class="nav__link">Archive</a></li>
+                        <li><a href="contact.html" class="btn btn--primary" aria-current="page">Contact</a></li>
+                    </ul>
+                </nav>
 
-                <!-- toggle button -->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-4-line"></i>
-                </div>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Dark theme" aria-pressed="false">
+                    <i class="ri-moon-line" aria-hidden="true"></i>
+                </button>
+
+                <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
+    <main id="main">
         <!--==================== CONTACT ====================-->
-        <section class="contact section">
-        <h2 class="section__title">
-            Let's Talk <br> About Your Project
-        </h2>
-
-        <div class="contact__page container grid">
-            <form action="" class="contact__form grid" id="contact-form">
-                <div class="contact__group grid">
-                    <div class="contact__box">
-                        <input type="text" name="user_name" id="name" required placeholder="Your Names" class="contact__input">
-                        <label for="name" class="contact__label">First & Last Name</label>
-                    </div>
-
-                    <div class="contact__box">
-                        <input type="email" name="user_email" id="email" required placeholder="Your E-mail" class="contact__input">
-                        <label for="email" class="contact__label">E-mail Address</label>
-                    </div>
-                </div>
-                
-                <div class="contact__box contact__area">
-                    <textarea name="user_message" id="message" required placeholder="Let's Talk About Your Next Project..." class="contact__input"></textarea>
-                    <label for="message" class="contact__label">Your Message</label>
+        <section class="section" aria-labelledby="contact-title">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow">Contact</p>
+                    <h1 id="contact-title">Let's talk about your project or role</h1>
+                    <p class="section__lead">
+                        For engineering roles, collaborations or a project you want to discuss, send a message below or email me directly.
+                    </p>
                 </div>
 
-                <p class="contact__message" id="contact-message"></p>
+                <div class="contact-layout">
+                    <div class="contact-details">
+                        <p>Email</p>
+                        <a href="mailto:michaeloluwatoba14@gmail.com" class="contact-details__email">michaeloluwatoba14@gmail.com</a>
 
-                <button type="submit" class="contact__send button">Send Message</button>
-            </form>
-        </div>
+                        <div class="hero__links">
+                            <a href="https://github.com/OluwaTobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-github-fill" aria-hidden="true"></i>
+                                <span class="visually-hidden">GitHub (opens in a new tab)</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-linkedin-fill" aria-hidden="true"></i>
+                                <span class="visually-hidden">LinkedIn (opens in a new tab)</span>
+                            </a>
+                            <a href="https://wa.me/2348141993288?text=Hi%20Michael!%20I%20would%20like%20to%20connect%20with%20you!" class="icon-link" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-whatsapp-fill" aria-hidden="true"></i>
+                                <span class="visually-hidden">WhatsApp (opens in a new tab)</span>
+                            </a>
+                            <a href="https://twitter.com/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                                <i class="ri-twitter-x-fill" aria-hidden="true"></i>
+                                <span class="visually-hidden">X (opens in a new tab)</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <form class="contact-form" id="contact-form">
+                        <div class="field">
+                            <label for="name">Full name</label>
+                            <input type="text" id="name" name="user_name" autocomplete="name" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="user_email" autocomplete="email" required>
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="user_message" required placeholder="Tell me about the role, project or collaboration."></textarea>
+                        </div>
+
+                        <p class="contact-form__status" id="contact-status" role="status" aria-live="polite"></p>
+
+                        <button type="submit" class="btn btn--primary contact-form__submit">Send message</button>
+                    </form>
+                </div>
+            </div>
         </section>
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__container container grid">
-            <div class="footer__content grid">
-                <a href="index.html" class="footer__logo">M.O.O.O</a>
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="index.html#projects">Projects</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Archive</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-                <ul class="footer__links">
-                    <li>
-                        <a href="/about.html" class="footer__link">About Me</a>
-                    </li>
-                    <li>
-                        <a href="/work.html" class="footer__link">My Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="/contact.html" class="footer__link">Contact Me</a>
-                    </li>
-                </ul>
-
+            <div class="footer__row">
+                <p>&copy; 2026 Michael Ogundipe. All rights reserved.</p>
                 <div class="footer__socials">
-                    <a href="https://github.com/OluwaTobba" target="_blank" class="footer__social-link">
-                        <i class="ri-github-fill"></i>
+                    <a href="https://github.com/OluwaTobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-github-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">GitHub (opens in a new tab)</span>
                     </a>
-                    <a href="https://twitter.com/michaeltobba" target="_blank" class="footer__social-link">
-                        <i class="ri-twitter-x-fill"></i>
+                    <a href="https://www.linkedin.com/in/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-linkedin-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">LinkedIn (opens in a new tab)</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/michaeltobba" target="_blank" class="footer__social-link">
-                        <i class="ri-linkedin-fill"></i>
-                    </a>
-                    <a href="https://www.instagram.com/michaeltobba/" target="_blank" class="footer__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <a href="https://wa.me/2348141993288/?text=Hi%20Michael!%20I%20would%20like%20to%20connect%20with%20you!" target="_blank" class="footer__social-link">
-                        <i class="ri-whatsapp-fill"></i>
-                    </a>
-                    <a href="mailto:michaeloluwatoba14@gmail.com" target="_blank" class="footer__social-link">
-                        <i class="ri-mail-send-fill"></i>
+                    <a href="https://twitter.com/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-twitter-x-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">X (opens in a new tab)</span>
                     </a>
                 </div>
             </div>
-
-            <span  class="footer__copy">
-                Michael Opemipo Oluwatoba Ogundipe <br> &#169; 2024 All Rights Reserved.
-            </span>
         </div>
     </footer>
-    
 
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
-    
+    <script src="assets/js/main.js" defer></script>
+
     <!--=============== EMAIL JS ===============-->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    
-    <!--=============== CONTACT JS ===============-->
-    <script src="assets/js/contact.js"></script>
+
+    <!--=============== CONTACT FORM ===============-->
+    <script src="assets/js/contact.js" defer></script>
 </body>
 </html>

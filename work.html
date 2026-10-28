@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FDSJ0LZVRY"></script>
     <script>
@@ -14,366 +13,417 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Project archive of Michael Ogundipe: web applications, landing pages, and software projects built with React, Next.js, PHP, Firebase, and vanilla JavaScript.">
+    <meta name="theme-color" content="#f7f7f4">
 
-    <!--=============== FAVICON ===============-->
-    <link rel="shortcut icon" href="assets/img/me1.jpg" type="image/x-icon">
+    <title>Project Archive | Michael Ogundipe</title>
+    <link rel="canonical" href="https://michaeltobba.netlify.app/work.html">
 
-    <!--=============== REMIXICONS ===============-->
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Michael Ogundipe">
+    <meta property="og:title" content="Project Archive | Michael Ogundipe">
+    <meta property="og:description" content="Web applications, landing pages, and software projects by Michael Ogundipe.">
+    <meta property="og:url" content="https://michaeltobba.netlify.app/work.html">
+    <meta property="og:image" content="https://michaeltobba.netlify.app/assets/img/profile-800.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css">
-
-    <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css">
 
-    <title>Portfolio - Michael Ogundipe</title>
+    <script>
+    try {
+        var savedTheme = localStorage.getItem('theme');
+        if (savedTheme) document.documentElement.dataset.theme = savedTheme;
+    } catch (error) {}
+    </script>
 </head>
 <body>
+    <a href="#main" class="skip-link">Skip to content</a>
+
     <!--==================== HEADER ====================-->
-    <header class="header header-pages" id="header">
-        <nav class="nav container">
-            <a href="/index.html" class="nav__logo">M.O.O.O</a>
-
-            <div class="nav__menu" id="nav-menu">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="/index.html" class="nav__link">Home</a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="/about.html" class="nav__link">About Me</a>
-                    </li>
-
-                    <li class="nav_item">
-                        <a href="/work.html" class="nav__link">Portfolio</a>
-                    </li>
-                    
-                    <li class="nav_item">
-                        <a href="/contact.html" class="button">Contact Me</a>
-                    </li>
-                </ul>
-
-                <!-- close button -->
-                <div class="nav__close" id="nav-close">
-                    <i class="ri-close-line"></i>
-                </div>
-            </div>
+    <header class="site-header" id="site-header">
+        <div class="container nav">
+            <a href="index.html" class="nav__brand">Michael Ogundipe</a>
 
             <div class="nav__actions">
-                <!-- theme button -->
-                <i class="ri-moon-line change-theme" id="theme-button"></i>
+                <nav class="site-nav" id="site-nav" aria-label="Primary" hidden>
+                    <ul class="nav__list">
+                        <li><a href="index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="index.html#approach" class="nav__link">Approach</a></li>
+                        <li><a href="index.html#skills" class="nav__link">Skills</a></li>
+                        <li><a href="about.html" class="nav__link">About</a></li>
+                        <li><a href="work.html" class="nav__link" aria-current="page">Archive</a></li>
+                        <li><a href="contact.html" class="btn btn--primary">Contact</a></li>
+                    </ul>
+                </nav>
 
-                <!-- toggle button -->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-4-line"></i>
-                </div>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Dark theme" aria-pressed="false">
+                    <i class="ri-moon-line" aria-hidden="true"></i>
+                </button>
+
+                <button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Menu">
+                    <i class="ri-menu-line" aria-hidden="true"></i>
+                </button>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <!--==================== MAIN ====================-->
-    <main class="main">
-        <!--==================== WORK ====================-->
-        <section class="work section">
-        <h2 class="section__title">
-            My Most <br>Recent Works
-        </h2>
+    <main id="main">
+        <!--==================== ARCHIVE ====================-->
+        <section class="section" aria-labelledby="archive-title">
+            <div class="container">
+                <div class="section__head">
+                    <p class="eyebrow">Project archive</p>
+                    <h1 id="archive-title">Project archive</h1>
+                    <p class="section__lead">
+                        Client work, practice projects and experiments. Projects marked as paused had deployments that the client has
+                        since paused. Stack labels describe the technologies used in each project.
+                    </p>
+                </div>
 
-        <div class="work__container work__page container grid">
+                <div class="work-grid">
+                    <article class="work-card">
+                        <a href="https://bodeabbeygratis.vercel.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/bodeabbey-800.png" width="800" height="384" alt="Screenshot of the BodeAbbey website" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">BodeAbbey Website</h2>
+                                <p class="work-card__meta">Next.js, Tailwind CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://bodeabbeygratis.vercel.app" target="_blank" class="work__link">
-                    <img src="/assets/img/bodeabbey.png" alt="BodeAbbey Website" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">BodeAbbey Website</h2>
-                <span class="work__subtitle">Web Development (Next, TailwindCSS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://iras-nine.vercel.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/iras.png" width="1920" height="916" alt="Screenshot of the IRAS inspection report application" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">IRAS: Inspection Report Automation System</h2>
+                                <p class="work-card__meta">React, Tailwind CSS, Firebase</p>
+                                <span class="work-card__status">Deployment paused by client</span>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://iras-nine.vercel.app" target="_blank" class="work__link">
-                    <img src="/assets/img/iras.png" alt="IRAS" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">IRAS (Client paused deployment)</h2>
-                <span class="work__subtitle">Software Development (React, TailwindCSS, Firebase)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://propheticfireconference.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/mfm-lp-1.png" width="1350" height="682" alt="Screenshot of the MFM Conference Registration Portal" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">MFM Conference Registration Portal</h2>
+                                <p class="work-card__meta">React, Tailwind CSS, Firebase</p>
+                                <span class="work-card__status">Deployment paused by client</span>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://propheticfireconference.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/mfm-lp-1.png" alt="MFM Conference Registration Portal" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">MFM Conference Registration Portal (Client paused deployment)</h2>
-                <span class="work__subtitle">Software Development (React, TailwindCSS, Firebase)</span>
-            </article>
-            
-            <article class="work__card">
-                <a href="https://colorsfashionwknd.netlify.app/" target="_blank" class="work__link">
-                    <img src="/assets/img/colos_wknd.png" alt="Colors Fashion Wknd Website" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">Colors Fashion Wknd Website (Client paused deployment)</h2>
-                <span class="work__subtitle">Software Development (HTML, CSS, JavaScript, Netlify Forms, Flutterwave Payment SDK)</span>
-            </article>
-            
-            <article class="work__card">
-                <a href="https://lita-web-dev-exam.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/lita-exam-portal.png" alt="LITA Exam Portal" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">LITA Exam Portal (Client paused deployment)</h2>
-                <span class="work__subtitle">Software Development (React, TailwindCSS, Firebase)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://colorsfashionwknd.netlify.app/" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/colos_wknd.png" width="1349" height="680" alt="Screenshot of the Colors Fashion Wknd website" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">Colors Fashion Wknd Website</h2>
+                                <p class="work-card__meta">HTML, CSS, JavaScript, Netlify Forms, Flutterwave Payment SDK</p>
+                                <span class="work-card__status">Deployment paused by client</span>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://github.com/OluwaTobba/music_player" target="_blank" class="work__link">
-                    <img src="/assets/img/music-app.png" alt="Music App" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Mobile Music App</h2>
-                <span class="work__subtitle">Software Development (HTML, CSS, and JavaScript)</span>
-            </article>
-            
-            <article class="work__card">
-                <a href="https://emrsystems.netlify.app/" target="_blank" class="work__link">
-                    <img src="/assets/img/emrs.png" alt="EMRs WebApp" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">EMRs WebApp</h2>
-                <span class="work__subtitle">Software Development (React JS, Tailwind, Firebase)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://lita-web-dev-exam.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/lita-exam-portal.png" width="1919" height="972" alt="Screenshot of the LITA Exam Portal" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">LITA Exam Portal</h2>
+                                <p class="work-card__meta">React, Tailwind CSS, Firebase</p>
+                                <span class="work-card__status">Deployment paused by client</span>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://github.com/OluwaTobba/CAJEM-Social" target="_blank" class="work__link">
-                    <img src="/assets/img/cajem-social.png" alt="CAJEM Social Media WebApp" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">CAJEM Social Media WebApp (Client paused deployment)</h2>
-                <span class="work__subtitle">Software Development (React JS, PHP, Tailwind, Firebase)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://github.com/OluwaTobba/music_player" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/music-app.png" width="375" height="253" alt="Screenshot of the mobile music app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Mobile Music App</h2>
+                                <p class="work-card__meta">HTML, CSS, JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://uspslabels.vercel.app" target="_blank" class="work__link">
-                    <img src="/assets/img/usps-labels.png" alt="USPS Labels" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">USPS Labels (Client paused deployment)</h2>
-                <span class="work__subtitle">Website Development (HTML, CSS, Bootstrap, JS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://emrsystems.netlify.app/" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/emrs-800.png" width="800" height="395" alt="Screenshot of the EMRs web app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">EMRs Web App</h2>
+                                <p class="work-card__meta">JavaScript, Vite, Tailwind CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://mi-contact-management-app.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/mi-cms.png" alt="A Contact Management App" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Contact Management App</h2>
-                <span class="work__subtitle">Software Development (React JS, CSS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://github.com/OluwaTobba/CAJEM-Social" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/cajem-social.png" width="1920" height="834" alt="Screenshot of the CAJEM Social media web app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">CAJEM Social Media Web App</h2>
+                                <p class="work-card__meta">React, PHP, Tailwind CSS, Firebase</p>
+                                <span class="work-card__status">Deployment paused by client</span>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://mi-timer.netlify.app/" target="_blank" class="work__link">
-                    <img src="/assets/img/react-timer.png" alt="A React Timer App" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A React Timer App</h2>
-                <span class="work__subtitle">Software Development (CSS, React JS)</span>
-            </article>
-            
-            <article class="work__card">
-                <a href="https://mi-translator-app.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/translator-app.png" alt="A Language Translator App" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Language Translator App</h2>
-                <span class="work__subtitle">Backend Development (HTML, CSS, JS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://uspslabels.vercel.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/usps-labels.png" width="1920" height="826" alt="Screenshot of the USPS Labels website" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">USPS Labels</h2>
+                                <p class="work-card__meta">HTML, CSS, Bootstrap, JavaScript</p>
+                                <span class="work-card__status">Deployment paused by client</span>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://mi-modern-login-form.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/modern-login-form.png" alt="A Modern Login Form" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Modern Login Form</h2>
-                <span class="work__subtitle">Website Design (HTML, CSS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://mi-contact-management-app.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/mi-cms.png" width="1920" height="729" alt="Screenshot of the contact management app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Contact Management App</h2>
+                                <p class="work-card__meta">React, CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://mi-free-landing-page-template.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/html-lp.png" alt="A Free HTML Landing Page" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Free HTML Landing Page</h2>
-                <span class="work__subtitle">Website Design (HTML, CSS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://mi-timer.netlify.app/" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/react-timer.png" width="1920" height="962" alt="Screenshot of the React timer app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A React Timer App</h2>
+                                <p class="work-card__meta">React, CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://github.com/OluwaTobba/A-PHP-Calculator" target="_blank" class="work__link">
-                    <img src="/assets/img/php-calc.png" alt="A PHP based Calculator" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A PHP based Calculator</h2>
-                <span class="work__subtitle">Backend Development (PHP, CSS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://mi-translator-app.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/translator-app.png" width="1920" height="930" alt="Screenshot of the language translator app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Language Translator App</h2>
+                                <p class="work-card__meta">Translates English to Yoruba, Igbo and Hausa. HTML, CSS, JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://react-airline-landing-page.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/react-app-1.png" alt="A React Landing Page" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A React Landing Page</h2>
-                <span class="work__subtitle">Software Development (CSS, React JS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://mi-modern-login-form.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/modern-login-form.png" width="1918" height="766" alt="Screenshot of the modern login form" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Modern Login Form</h2>
+                                <p class="work-card__meta">HTML, CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://mi-tic-tac-toe-game.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/tic-tac-toe.png" alt="A Tic-Tac-Toe Game" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Tic-Tac-Toe Game</h2>
-                <span class="work__subtitle">Software Development (HTML, CSS, JS)</span>
-            </article>
-            
-            <article class="work__card">
-                <a href="https://mi-progress-register-form.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/progress-form.png" alt="A Progress Register Form" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Progress Register Form</h2>
-                <span class="work__subtitle">Website Design (HTML, JS)</span>
-            </article>
-            
-            <article class="work__card">
-                <a href="https://mi-checkout-page.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/checkout-page.png" alt="A Checkout Page Design" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Checkout Page Design</h2>
-                <span class="work__subtitle">Website Design (HTML)</span>
-            </article>
-            
-            <article class="work__card">
-                <a href="https://tricky-login-button.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/tricky-login.png" alt="a tricky login button" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Tricky Login Button</h2>
-                <span class="work__subtitle">Website Development (JS)</span>
-            </article>
-            
-            <article class="work__card">
-                <a href="https://mibudgetapp.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/mi-budget-app.png" alt="a budget tracker" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">An Expenses/Budget Tracker App</h2>
-                <span class="work__subtitle">Software Development (HTML, CSS, JS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://mi-free-landing-page-template.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/html-lp.png" width="1920" height="928" alt="Screenshot of the free HTML landing page" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Free HTML Landing Page</h2>
+                                <p class="work-card__meta">HTML, CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://3mtt-assignment-6.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/todo-list.png" alt="a budget tracker" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Todo list App</h2>
-                <span class="work__subtitle">Software Development (JS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://github.com/OluwaTobba/A-PHP-Calculator" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/php-calc.png" width="1684" height="748" alt="Screenshot of the PHP calculator" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A PHP Based Calculator</h2>
+                                <p class="work-card__meta">PHP, CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://michaelo-3mtt-assignment5.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/faq-page.png" alt="a FAQ Page" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A FAQ Page</h2>
-                <span class="work__subtitle">Website Development (HTML, CSS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://react-airline-landing-page.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/react-app-1.png" width="1920" height="930" alt="Screenshot of the React airline landing page" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A React Landing Page</h2>
+                                <p class="work-card__meta">React, CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://michaelo-3mtt-assignment4.netlify.app/" target="_blank" class="work__link">
-                    <img src="/assets/img/mi-quiz-app.png" alt="a quiz app" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Simple Quiz App</h2>
-                <span class="work__subtitle">Website Development (JS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://mi-tic-tac-toe-game.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/tic-tac-toe.png" width="1920" height="728" alt="Screenshot of the tic-tac-toe game" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Tic-Tac-Toe Game</h2>
+                                <p class="work-card__meta">HTML, CSS, JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://bezalelfxuniversity.netlify.app" target="_blank" class="work__link">
-                    <img src="/assets/img/bezalel.png" alt="bezalelfxuniversity" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">Bezalel FX University</h2>
-                <span class="work__subtitle">Website Design (HTML, CSS, Bootstrap)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://mi-progress-register-form.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/progress-form.png" width="1920" height="728" alt="Screenshot of the progress register form" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Progress Register Form</h2>
+                                <p class="work-card__meta">HTML, JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://michaelo-3mtt1.netlify.app/" target="_blank" class="work__link">
-                    <img src="/assets/img/mi-watches.png" alt="a product landing page" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">A Product Landing Page</h2>
-                <span class="work__subtitle">Landing Page (HTML, CSS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://mi-checkout-page.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/checkout-page.png" width="1920" height="712" alt="Screenshot of the checkout page design" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Checkout Page Design</h2>
+                                <p class="work-card__meta">HTML</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-            <article class="work__card">
-                <a href="https://rccgghrg21.org" target="_blank" class="work__link">
-                    <img src="/assets/img/rccggh.png" alt="a church website" class="work__img">
-                    <i class="ri-arrow-right-double-line work__icon"></i>
-                </a>
-                <h2 class="work__title">RCCG Glory House (Region 21 HQ)</h2>
-                <span class="work__subtitle">Website Development (HTML, CSS, Bootstrap, JS)</span>
-            </article>
+                    <article class="work-card">
+                        <a href="https://tricky-login-button.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/tricky-login.png" width="1920" height="779" alt="Screenshot of the tricky login button" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Tricky Login Button</h2>
+                                <p class="work-card__meta">JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
 
-        </div>
+                    <article class="work-card">
+                        <a href="https://mibudgetapp.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/mi-budget-app.png" width="1351" height="646" alt="Screenshot of the expenses and budget tracker app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">An Expenses and Budget Tracker App</h2>
+                                <p class="work-card__meta">HTML, CSS, JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
+
+                    <article class="work-card">
+                        <a href="https://3mtt-assignment-6.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/todo-list.png" width="1349" height="654" alt="Screenshot of the to-do list app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A To-Do List App</h2>
+                                <p class="work-card__meta">JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
+
+                    <article class="work-card">
+                        <a href="https://michaelo-3mtt-assignment5.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/faq-page.png" width="1354" height="656" alt="Screenshot of the FAQ page" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A FAQ Page</h2>
+                                <p class="work-card__meta">HTML, CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
+
+                    <article class="work-card">
+                        <a href="https://michaelo-3mtt-assignment4.netlify.app/" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/mi-quiz-app.png" width="1362" height="646" alt="Screenshot of the simple quiz app" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Simple Quiz App</h2>
+                                <p class="work-card__meta">JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
+
+                    <article class="work-card">
+                        <a href="https://bezalelfxuniversity.netlify.app" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/bezalel.png" width="1348" height="610" alt="Screenshot of the Bezalel FX University website" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">Bezalel FX University</h2>
+                                <p class="work-card__meta">HTML, CSS, Bootstrap</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
+
+                    <article class="work-card">
+                        <a href="https://michaelo-3mtt1.netlify.app/" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/mi-watches.png" width="1363" height="661" alt="Screenshot of the product landing page" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">A Product Landing Page</h2>
+                                <p class="work-card__meta">HTML, CSS</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
+
+                    <article class="work-card">
+                        <a href="https://rccgghrg21.org" class="work-card__link" target="_blank" rel="noopener noreferrer">
+                            <div class="work-card__media"><img src="assets/img/rccggh.png" width="1346" height="616" alt="Screenshot of the RCCG Glory House Region 21 website" loading="lazy"></div>
+                            <div class="work-card__body">
+                                <h2 class="work-card__title">RCCG Glory House (Region 21 HQ)</h2>
+                                <p class="work-card__meta">HTML, CSS, Bootstrap, JavaScript</p>
+                            </div>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </article>
+                </div>
+            </div>
         </section>
     </main>
 
     <!--==================== FOOTER ====================-->
-    <footer class="footer">
-        <div class="footer__container container grid">
-            <div class="footer__content grid">
-                <a href="index.html" class="footer__logo">M.O.O.O</a>
+    <footer class="site-footer">
+        <div class="container footer__inner">
+            <nav class="footer__nav" aria-label="Footer">
+                <a href="index.html#projects">Projects</a>
+                <a href="about.html">About</a>
+                <a href="work.html">Archive</a>
+                <a href="contact.html">Contact</a>
+            </nav>
 
-                <ul class="footer__links">
-                    <li>
-                        <a href="/about.html" class="footer__link">About Me</a>
-                    </li>
-                    <li>
-                        <a href="/work.html" class="footer__link">My Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="/contact.html" class="footer__link">Contact Me</a>
-                    </li>
-                </ul>
-
+            <div class="footer__row">
+                <p>&copy; 2026 Michael Ogundipe. All rights reserved.</p>
                 <div class="footer__socials">
-                    <a href="https://github.com/OluwaTobba" target="_blank" class="footer__social-link">
-                        <i class="ri-github-fill"></i>
+                    <a href="https://github.com/OluwaTobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-github-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">GitHub (opens in a new tab)</span>
                     </a>
-                    <a href="https://twitter.com/michaeltobba" target="_blank" class="footer__social-link">
-                        <i class="ri-twitter-x-fill"></i>
+                    <a href="https://www.linkedin.com/in/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-linkedin-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">LinkedIn (opens in a new tab)</span>
                     </a>
-                    <a href="https://www.linkedin.com/in/michaeltobba" target="_blank" class="footer__social-link">
-                        <i class="ri-linkedin-fill"></i>
-                    </a>
-                    <a href="https://www.instagram.com/michaeltobba/" target="_blank" class="footer__social-link">
-                        <i class="ri-instagram-fill"></i>
-                    </a>
-                    <a href="https://wa.me/2348141993288/?text=Hi%20Michael!%20I%20would%20like%20to%20connect%20with%20you!" target="_blank" class="footer__social-link">
-                        <i class="ri-whatsapp-fill"></i>
-                    </a>
-                    <a href="mailto:michaeloluwatoba14@gmail.com" target="_blank" class="footer__social-link">
-                        <i class="ri-mail-send-fill"></i>
+                    <a href="https://twitter.com/michaeltobba" class="icon-link" target="_blank" rel="noopener noreferrer">
+                        <i class="ri-twitter-x-fill" aria-hidden="true"></i>
+                        <span class="visually-hidden">X (opens in a new tab)</span>
                     </a>
                 </div>
             </div>
-
-            <span  class="footer__copy">
-                Michael Opemipo Oluwatoba Ogundipe <br> &#169; 2024 All Rights Reserved.
-            </span>
         </div>
     </footer>
-    
 
-    <!--=============== MAIN JS ===============-->
-    <script src="assets/js/main.js"></script>
+    <script src="assets/js/main.js" defer></script>
 </body>
 </html>
