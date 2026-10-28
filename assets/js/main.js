@@ -1,57 +1,89 @@
-/*=============== SHOW MENU ===============*/
-const navMenu = document.getElementById('nav-menu'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
+/*=============== SITE INTERACTIONS ===============*/
+(() => {
+  const header = document.getElementById('site-header')
+  const navToggle = document.getElementById('nav-toggle')
+  const siteNav = document.getElementById('site-nav')
+  const themeToggle = document.getElementById('theme-toggle')
+  const mobileQuery = window.matchMedia('(max-width: 799px)')
 
-/* Menu show */
-if(navToggle){
-    navToggle.addEventListener('click', () =>{
-        navMenu.classList.add('show-menu')
-    })
-}
+  /* Storage can throw in private windows or with blocked site data */
+  const readTheme = () => {
+    try {
+      return localStorage.getItem('theme')
+    } catch (error) {
+      return null
+    }
+  }
 
-/* Menu hidden */
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
+  const saveTheme = (theme) => {
+    try {
+      localStorage.setItem('theme', theme)
+    } catch (error) {
+      /* The choice still applies for this visit */
+    }
+  }
 
-/*=============== CHANGE BACKGROUND HEADER ===============*/
-const bgHeader = () =>{
-    const header = document.getElementById('header')
-    // Add a class if the bottom offset is greater than 50 of the viewport
-    this.scrollY >= 50 ? header.classList.add('bg-header') 
-                       : header.classList.remove('bg-header')
-}
-window.addEventListener('scroll', bgHeader)
+  /*=============== HEADER SHADOW ===============*/
+  const updateHeader = () => {
+    header.classList.toggle('is-scrolled', window.scrollY > 8)
+  }
 
-/*=============== DARK LIGHT THEME ===============*/ 
-const themeButton = document.getElementById('theme-button')
-const darkTheme = 'dark-theme'
-const iconTheme = 'ri-sun-line'
+  updateHeader()
+  window.addEventListener('scroll', updateHeader, { passive: true })
 
-// Previously selected topic (if user selected)
-const selectedTheme = localStorage.getItem('selected-theme')
-const selectedIcon = localStorage.getItem('selected-icon')
+  /*=============== MOBILE MENU ===============*/
+  const setMenuOpen = (open) => {
+    siteNav.hidden = !open
+    navToggle.setAttribute('aria-expanded', String(open))
+    navToggle.querySelector('i').className = open ? 'ri-close-line' : 'ri-menu-line'
+  }
 
-// We obtain the current theme that the interface has by validating the dark-theme class
-const getCurrentTheme = () => document.body.classList.contains(darkTheme) ? 'dark' : 'light'
-const getCurrentIcon = () => themeButton.classList.contains(iconTheme) ? 'ri-moon-line' : 'ri-sun-line'
+  navToggle.addEventListener('click', () => {
+    setMenuOpen(siteNav.hidden)
+  })
 
-// We validate if the user previously chose a topic
-if (selectedTheme) {
-  // If the validation is fulfilled, we ask what the issue was to know if we activated or deactivated the dark
-  document.body.classList[selectedTheme === 'dark' ? 'add' : 'remove'](darkTheme)
-  themeButton.classList[selectedIcon === 'ri-moon-line' ? 'add' : 'remove'](iconTheme)
-}
+  /* Escape closes the menu and returns focus to the toggle */
+  siteNav.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && !siteNav.hidden) {
+      setMenuOpen(false)
+      navToggle.focus()
+    }
+  })
 
-// Activate / deactivate the theme manually with the button
-themeButton.addEventListener('click', () => {
-    // Add or remove the dark / icon theme
-    document.body.classList.toggle(darkTheme)
-    themeButton.classList.toggle(iconTheme)
-    // We save the theme and the current icon that the user chose
-    localStorage.setItem('selected-theme', getCurrentTheme())
-    localStorage.setItem('selected-icon', getCurrentIcon())
-})
+  /* Choosing a link on mobile closes the menu */
+  siteNav.addEventListener('click', (event) => {
+    if (event.target.closest('a') && mobileQuery.matches) {
+      setMenuOpen(false)
+    }
+  })
+
+  /* Desktop always shows the links; keep the toggle state consistent */
+  const syncMenuToViewport = () => {
+    if (!mobileQuery.matches) {
+      siteNav.hidden = false
+    } else {
+      setMenuOpen(false)
+    }
+  }
+
+  mobileQuery.addEventListener('change', syncMenuToViewport)
+  syncMenuToViewport()
+
+  /*=============== THEME ===============*/
+  const applyTheme = (theme) => {
+    document.documentElement.dataset.theme = theme
+    const isDark = theme === 'dark'
+    themeToggle.setAttribute('aria-pressed', String(isDark))
+    themeToggle.querySelector('i').className = isDark ? 'ri-sun-line' : 'ri-moon-line'
+  }
+
+  const storedTheme = readTheme()
+  const systemDark = window.matchMedia('(prefers-color-scheme: dark)').matches
+  applyTheme(storedTheme || (systemDark ? 'dark' : 'light'))
+
+  themeToggle.addEventListener('click', () => {
+    const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'
+    applyTheme(next)
+    saveTheme(next)
+  })
+})()
